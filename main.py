@@ -1,14 +1,14 @@
-print('Wow, factual facts!')
+print('hello...')
 import random
 
-name = input("What it do baby! Name?")
-print("Welcome to the mf guessing game," + name + "!")
-print("I'm thinking of a number between 1 and 100.")
-print("Try to guess it sucka!")
+name = input("What is your name?")
+print("Do you want to play a game," + name + "?")
+print("think of a number between 1 and 100.")
+print("don't lose. this is a dangerous game")
 
 my_number = random.randint(1, 100)
 guesses = []
-for guess_number in range(1,11):
+for guess_number in range(1,6):
     valid_guess = False
     while not valid_guess:
         try: 
@@ -21,14 +21,14 @@ for guess_number in range(1,11):
     guesses.append(user_guess)
 
     if user_guess < my_number and difference > 10:
-        print("WAY TOO LOW BUD. try again")
+        print("TOO LOW. uh oh. watch out")
       
     elif user_guess < my_number and difference < 10:
-        print("Just a bit too low. try again")
+        print("a bit too low. you're almost there")
     elif user_guess > my_number and difference > 10:
-        print("WAY TOO HIGH BUD. try again")
+        print("TOO HIGH. quit smoking")
     elif user_guess > my_number and difference < 10:
-        print("Just a bit too high. try again")
+        print("a bit too high. coming down")
     else:
       break
 
@@ -38,3 +38,5 @@ if user_guess == my_number:
   
 else:
   print("You big dummy! The number I was thinking of was " + str(my_number))
+  
+#test commit
